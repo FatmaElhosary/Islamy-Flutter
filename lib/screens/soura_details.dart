@@ -5,6 +5,7 @@ import 'package:islamy/my_theme.dart';
 import 'package:islamy/taps/quran_tab/aya_text.dart';
 import 'package:islamy/taps/quran_tab/soura_name_text.dart';
 import 'package:islamy/widgets/divider_line.dart';
+import 'package:islamy/widgets/progress_indicator.dart';
 
 import '../data_class/soura_details_args.dart';
 
@@ -49,15 +50,17 @@ class _SouraDetailsState extends State<SouraDetails> {
               suraDetailaName(souraName: souraDetails.SouraName),
               const DividerLine(),
               Expanded(
-                child: ListView.builder(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                  itemBuilder: (context, index) => AyaLine(
-                    ayaNumber: index + 1,
-                    ayaLine: ayat[index],
-                  ),
-                  itemCount: ayat.length,
-                ),
+                child: ayat.isEmpty
+                    ? const ProgressWait()
+                    : ListView.builder(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 10),
+                        itemBuilder: (context, index) => AyaLine(
+                          ayaNumber: index + 1,
+                          ayaLine: ayat[index],
+                        ),
+                        itemCount: ayat.length,
+                      ),
               )
             ],
           ),
