@@ -1,32 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:islamy/app_bar.dart';
+import 'package:islamy/data_class/hadeth_data.dart';
 import 'package:islamy/my_theme.dart';
 import 'package:islamy/taps/quran_tab/aya_text.dart';
 import 'package:islamy/taps/quran_tab/soura_name_text.dart';
 import 'package:islamy/widgets/divider_line.dart';
 
-import '../data_class/soura_details_args.dart';
-
-class SouraDetails extends StatefulWidget {
-  static const String routeName = 'soura-datails';
-
-  SouraDetails({super.key});
-
-  @override
-  State<SouraDetails> createState() => _SouraDetailsState();
-}
-
-class _SouraDetailsState extends State<SouraDetails> {
-  List<String> ayat = [];
+class HadethDetails extends StatelessWidget {
+  static const String routeName = 'dadeth-details';
+ 
+  HadethDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SouraDetailsArgs souraDetails =
-        ModalRoute.of(context)!.settings.arguments as SouraDetailsArgs;
-    if (ayat.isEmpty) {
-      loadSouraFile(souraDetails.SouraNumber);
-    }
+     Hadeth hadeth=ModalRoute.of(context)?.settings.arguments as Hadeth;
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -46,7 +33,7 @@ class _SouraDetailsState extends State<SouraDetails> {
           ),
           child: Column(
             children: [
-              suraDetailaName(souraName: souraDetails.SouraName),
+              suraDetailaName(souraName: hadeth.hadethNumber),
               const DividerLine(),
               Expanded(
                 child: ListView.builder(
@@ -54,9 +41,9 @@ class _SouraDetailsState extends State<SouraDetails> {
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   itemBuilder: (context, index) => AyaLine(
                     ayaNumber: index + 1,
-                    ayaLine: ayat[index],
+                    ayaLine: hadeth.hadethContentLines[index],
                   ),
-                  itemCount: ayat.length,
+                  itemCount: hadeth.hadethContentLines.length,
                 ),
               )
             ],
@@ -64,12 +51,5 @@ class _SouraDetailsState extends State<SouraDetails> {
         ),
       ),
     );
-  }
-
-  Future<void> loadSouraFile(int suraNumber) async {
-    String sura = await rootBundle.loadString('assets/files/$suraNumber.txt');
-    print(sura);
-    ayat = sura.trim().split('\r\n');
-    setState(() {});
   }
 }
