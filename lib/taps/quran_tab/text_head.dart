@@ -7,6 +7,10 @@ class TextHead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: Text(textTitle));
+    return Text(
+      textTitle,
+      style: Theme.of(context).textTheme.headlineSmall,
+      textAlign: TextAlign.center,
+    );
   }
 }
