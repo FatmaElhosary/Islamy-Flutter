@@ -79,29 +79,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-/* bottomNavigationBar: BottomNavigationBar(
-          currentIndex:_selectedIndex ,
-          items: const [
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/images/radio_icon.png'),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/sebha_icon.png')),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/hadeth_icon.png')),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/quran_icon.png')),
-              label: '',
-            ),
 
-          ],
-          type: BottomNavigationBarType.fixed,
-          onTap:_onItemTapped ,
-        ),*/

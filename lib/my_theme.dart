@@ -6,7 +6,7 @@ class MyTheme {
   static Color primary = Color(0xFFB7935F);
   static ThemeData lightTheme = ThemeData(
       primaryColor: primary,
-      /*   colorScheme: ColorScheme.fromSeed(
+      /* colorScheme: ColorScheme.fromSeed(
         surface: primary,
         secondaryContainer: Colors.transparent,
         primary: primary,
@@ -16,17 +16,36 @@ class MyTheme {
       ),*/
       textTheme: TextTheme(
           headlineLarge: TextStyle(
-        fontSize: 30,
-        fontWeight: FontWeight.bold,
-        fontFamily: 'El Messiri',
-        color: blackColor,
-      )),
-      appBarTheme: const AppBarTheme(
-        centerTitle: true,
-        //titleTextStyle: textTheme.headlineLarge,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'El Messiri',
+            color: blackColor,
+          ),
+          headlineSmall: TextStyle(
+            fontSize: 25,
+            color: blackColor,
+            fontFamily: 'El Messiri',
+            fontWeight: FontWeight.w600,
+          ),
+          labelLarge: const TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Monotype Koufi',
+          ),
+          labelMedium: TextStyle(
+            fontFamily: 'DecoType Thuluth',
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+            color: blackColor,
+            height: 2,
+          )),
+      appBarTheme: AppBarTheme(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: blackColor,
+          )),
       scaffoldBackgroundColor: Colors.transparent,
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: primary,
