@@ -14,6 +14,7 @@ class MyTheme {
         onPrimary: blackColor,
         secondary: lightWhite,
       ),*/
+      iconTheme: IconThemeData(color: primary),
       textTheme: TextTheme(
           headlineLarge: TextStyle(
             fontSize: 30,

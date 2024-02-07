@@ -4,15 +4,23 @@ import 'package:islamy/data_class/hadeth_data.dart';
 import 'package:islamy/taps/hadeth_tab/ahadeth_image.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth_title.dart';
-import 'package:islamy/taps/quran_tab/sura_name.dart';
 import 'package:islamy/widgets/global_divid.dart';
 
-class HadethView extends StatelessWidget {
+class HadethView extends StatefulWidget {
   HadethView({super.key});
+
+  @override
+  State<HadethView> createState() => _HadethViewState();
+}
+
+class _HadethViewState extends State<HadethView> {
   List<Hadeth> ahadethList = [];
+
   @override
   Widget build(BuildContext context) {
-    readAhadethFile();
+    if (ahadethList.isEmpty) {
+      readAhadethFile();
+    }
     return Column(
       children: [
         AhadethImg(
@@ -46,5 +54,6 @@ class HadethView extends StatelessWidget {
       List<String> hadethLines = lines;
       return Hadeth(hadethNumber: title, hadethContentLines: hadethLines);
     }).toList();
+    setState(() {});
   }
 }

@@ -5,13 +5,19 @@ class RadioControl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            IconButton(onPressed: () => {}, icon: Icon(Icons.play_arrow_sharp)),
-            IconButton(onPressed: () => {}, icon: Icon(Icons.play_arrow_sharp)),
-            IconButton(onPressed: () => {}, icon: Icon(Icons.play_arrow_sharp)),
-          ],
-        );
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        IconButton(
+            onPressed: () => {},
+            icon: const ImageIcon(AssetImage('assets/images/back-icon.png'))),
+        IconButton(
+            onPressed: () => {},
+            icon: const ImageIcon(AssetImage('assets/images/play-icon.png'))),
+        IconButton(
+            onPressed: () => {},
+            icon: const ImageIcon(AssetImage('assets/images/next-icon.png'))),
+      ],
+    );
   }
 }
