@@ -5,6 +5,7 @@ import 'package:islamy/taps/hadeth_tab/ahadeth_image.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth_title.dart';
 import 'package:islamy/widgets/global_divid.dart';
+import 'package:islamy/widgets/progress_indicator.dart';
 
 class HadethView extends StatefulWidget {
   HadethView({super.key});
@@ -30,15 +31,18 @@ class _HadethViewState extends State<HadethView> {
         HadethHeader(title: 'الأحاديث'),
         const DivideHorizental(),
         Expanded(
-            child: ListView.separated(
-          padding: const EdgeInsets.symmetric(vertical: 17.5),
-          itemBuilder: (context, index) =>
-              HadethTitle(hadeth: ahadethList[index]),
-          itemCount: ahadethList.length,
-          separatorBuilder: (BuildContext context, int index) => const SizedBox(
-            height: 11,
-          ),
-        )),
+            child: ahadethList.isEmpty
+                ? const ProgressWait()
+                : ListView.separated(
+                    padding: const EdgeInsets.symmetric(vertical: 17.5),
+                    itemBuilder: (context, index) =>
+                        HadethTitle(hadeth: ahadethList[index]),
+                    itemCount: ahadethList.length,
+                    separatorBuilder: (BuildContext context, int index) =>
+                        const SizedBox(
+                      height: 11,
+                    ),
+                  )),
       ],
     );
   }
