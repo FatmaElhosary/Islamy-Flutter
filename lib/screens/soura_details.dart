@@ -12,7 +12,7 @@ import '../data_class/soura_details_args.dart';
 class SouraDetails extends StatefulWidget {
   static const String routeName = 'soura-datails';
 
-  SouraDetails({super.key});
+  const SouraDetails({super.key});
 
   @override
   State<SouraDetails> createState() => _SouraDetailsState();
@@ -47,7 +47,7 @@ class _SouraDetailsState extends State<SouraDetails> {
           ),
           child: Column(
             children: [
-              suraDetailaName(souraName: souraDetails.SouraName),
+              suraDetailsName(souraName: souraDetails.SouraName),
               const DividerLine(),
               Expanded(
                 child: ayat.isEmpty
@@ -71,7 +71,7 @@ class _SouraDetailsState extends State<SouraDetails> {
 
   Future<void> loadSouraFile(int suraNumber) async {
     String sura = await rootBundle.loadString('assets/files/$suraNumber.txt');
-    print(sura);
+    
     ayat = sura.trim().split('\r\n');
     setState(() {});
   }

@@ -9,7 +9,7 @@ import 'package:islamy/widgets/divider_line.dart';
 class HadethDetails extends StatelessWidget {
   static const String routeName = 'dadeth-details';
  
-  HadethDetails({super.key});
+  const HadethDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class HadethDetails extends StatelessWidget {
           ),
           child: Column(
             children: [
-              suraDetailaName(souraName: hadeth.hadethNumber),
+              suraDetailsName(souraName: hadeth.hadethNumber),
               const DividerLine(),
               Expanded(
                 child: ListView.builder(

@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (_) => const HomeScreen(),
-        SouraDetails.routeName:(_)=> SouraDetails(),
-        HadethDetails.routeName:(_)=>HadethDetails(),
+        SouraDetails.routeName:(_)=> const SouraDetails(),
+        HadethDetails.routeName:(_)=>const HadethDetails(),
 
       },
     );

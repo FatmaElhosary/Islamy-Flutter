@@ -3,7 +3,8 @@ import 'package:islamy/taps/quran_tab/sura_name.dart';
 
 class NamesListWidget extends StatelessWidget {
   List<String> souraNames;
-  NamesListWidget({super.key, required this.souraNames});
+  bool isClicked;
+  NamesListWidget({super.key, required this.souraNames,required this.isClicked });
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class NamesListWidget extends StatelessWidget {
         itemBuilder: (context, index) => SuraName(
           souraName: souraNames[index],
           index: index,
+          isClicked: isClicked,
         ),
         itemCount: souraNames.length,
         separatorBuilder: (BuildContext context, int index) {

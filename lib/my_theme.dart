@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyTheme {
-  static Color blackColor = Color(0xFF242424);
-  static Color lightWhite = Color(0xFFF8F8F8);
-  static Color primary = Color(0xFFB7935F);
+  static Color blackColor = const Color(0xFF242424);
+  static Color lightWhite = const Color(0xFFF8F8F8);
+  static Color primary = const Color(0xFFB7935F);
+  static Color primaryAlpha = const Color(0xFFB7935F).withOpacity(.6);
   static ThemeData lightTheme = ThemeData(
       primaryColor: primary,
+
       /* colorScheme: ColorScheme.fromSeed(
         surface: primary,
         secondaryContainer: Colors.transparent,
