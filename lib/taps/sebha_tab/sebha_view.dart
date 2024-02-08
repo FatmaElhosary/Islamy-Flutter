@@ -4,8 +4,44 @@ import 'package:islamy/taps/sebha_tab/zkr_name.dart';
 import 'package:islamy/widgets/image_widget.dart';
 import 'package:islamy/widgets/title_widget.dart';
 
-class SebhaView extends StatelessWidget {
-  const SebhaView({super.key});
+class SebhaView extends StatefulWidget {
+  SebhaView({super.key});
+
+  @override
+  State<SebhaView> createState() => _SebhaViewState();
+}
+
+class _SebhaViewState extends State<SebhaView> {
+  List<String> azkar = ['سبحان الله', 'الحمد الله'];
+  int counter = 0;
+  int index = 0;
+  double turns = 0.0;
+  @override
+  void initState() {
+    counter = 0;
+    index = 0;
+    super.initState();
+  }
+
+  void onTapSebha() {
+    //sebha no change if counter =33
+    if (counter != 33) {
+      turns += 1 / 33;
+    }
+    counter++;
+    //stop when counter =33///
+    if (counter == 34) {
+      //start new zkr
+      if (index < azkar.length - 1) {
+        index++;
+      } else {
+        index = 0;
+      }
+      counter = 0;
+    }
+
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +49,15 @@ class SebhaView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-            flex: 1, child: ImageWidget(imgPath: 'assets/images/sebha.png')),
+            flex: 1,
+            child: InkWell(
+                onTap: () {
+                  onTapSebha();
+                },
+                child: AnimatedRotation(
+                    turns: turns,
+                    duration: const Duration(seconds: 1),
+                    child: ImageWidget(imgPath: 'assets/images/sebha.png')))),
         const SizedBox(
           height: 41,
         ),
@@ -23,8 +67,8 @@ class SebhaView extends StatelessWidget {
               TitleWidget(
                 title: 'عدد التسبيحات',
               ),
-              TasbehNumber(number: 30),
-              AzkarName(azkarName: 'سبحان الله'),
+              TasbehNumber(number: counter),
+              AzkarName(azkarName: azkar[index]),
             ],
           ),
         )
