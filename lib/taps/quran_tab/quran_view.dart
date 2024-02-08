@@ -239,6 +239,7 @@ class QuranView extends StatelessWidget {
     "الناس"
   ];
   QuranView({super.key}) {
+    ////fill Sour List ////
     for (int i = 0; i < souraNames.length; i++) {
       sour.add(
           Soura(souraName: souraNames[i], ayatNumber: quranVerseCounts[i]));
@@ -246,8 +247,6 @@ class QuranView extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    print(souraNames.length);
-    print(sour[0].souraName);
     return Column(
       children: [
         Image.asset('assets/images/quran.png'),
@@ -255,6 +254,44 @@ class QuranView extends StatelessWidget {
           height: 13.5,
         ),
         Expanded(
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  const DivideHorizental(),
+                  Row(
+                    children: [
+                      TextHead(
+                        textTitle: 'عدد الآيات',
+                      ),
+                      TextHead(
+                        textTitle: 'اسم السورة',
+                      ),
+                    ],
+                  ),
+                  const DivideHorizental(),
+                  NamesListWidget(
+                    sour: sour,
+                  ),
+                ],
+              ),
+              Center(
+                child: VerticalDivider(
+                  thickness: 3,
+                  indent: 0,
+                  endIndent: 0,
+                  width: 0,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+  /*  Expanded(
           child: Row(
             children: <Widget>[
               Expanded(
@@ -267,8 +304,8 @@ class QuranView extends StatelessWidget {
                     ),
                     const DivideHorizental(),
                     NamesListWidget(
-                      souraNames: quranVerseCounts,
-                      isClicked: false,
+                      sour: sour,
+                     
                     )
                   ],
                 ),
@@ -305,7 +342,5 @@ class QuranView extends StatelessWidget {
             ],
           ),
         ),
-      ],
-    );
-  }
-}
+       */
+          
