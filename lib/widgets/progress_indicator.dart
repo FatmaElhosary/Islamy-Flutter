@@ -6,7 +6,7 @@ class ProgressWait extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child:  CircularProgressIndicator(
+        child: CircularProgressIndicator(
       color: Theme.of(context).primaryColor,
     ));
   }

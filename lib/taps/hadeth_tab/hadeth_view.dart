@@ -8,7 +8,7 @@ import 'package:islamy/widgets/global_divid.dart';
 import 'package:islamy/widgets/progress_indicator.dart';
 
 class HadethView extends StatefulWidget {
-  HadethView({super.key});
+  const HadethView({super.key});
 
   @override
   State<HadethView> createState() => _HadethViewState();

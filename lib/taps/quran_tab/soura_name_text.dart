@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class suraDetailaName extends StatelessWidget {
+class suraDetailsName extends StatelessWidget {
   String souraName;
-  suraDetailaName({super.key, required this.souraName});
+  suraDetailsName({super.key, required this.souraName});
 
   @override
   Widget build(BuildContext context) {
