@@ -281,7 +281,7 @@ class QuranView extends StatelessWidget {
                   indent: 0,
                   endIndent: 0,
                   width: 0,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.onSecondary,
                 ),
               ),
             ],

@@ -10,7 +10,7 @@ class DividerLine extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
                 child: Divider(
                   thickness: 1,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.onSecondary,
                 ),
               );
   }

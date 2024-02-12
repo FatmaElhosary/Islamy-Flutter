@@ -9,18 +9,14 @@ class AzkarName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      
         decoration: BoxDecoration(
           border: Border.all(width: 0),
           borderRadius: BorderRadius.circular(25),
-          color: MyTheme.primary,
+          color: Theme.of(context).colorScheme.onSecondary,
         ),
         child: Text(
           azkarName,
-          style: Theme.of(context)
-              .textTheme
-              .labelLarge
-              ?.copyWith(color: MyTheme.lightWhite),
+          style: Theme.of(context).textTheme.labelLarge,
         ));
   }
 }

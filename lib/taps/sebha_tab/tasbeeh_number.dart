@@ -15,7 +15,7 @@ class TasbehNumber extends StatelessWidget {
           width: 0,
         ),
         borderRadius: BorderRadius.circular(25),
-        color: MyTheme.primaryAlpha,
+        color: Theme.of(context).colorScheme.primary,
       ),
       child: Text(
         '$number',

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islamy/packages/providers/settings_provider.dart';
+import 'package:provider/provider.dart';
 
 class suraDetailsName extends StatelessWidget {
   String souraName;
@@ -9,13 +11,13 @@ class suraDetailsName extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset('assets/images/Icon awesome-play-circle.png'),
-        SizedBox(
+        Image.asset(Provider.of<SettingsProvider>(context).playImg),
+        const SizedBox(
           width: 26,
         ),
         Text(
           souraName,
-          style: Theme.of(context).textTheme.labelLarge,
+          style: Theme.of(context).textTheme.labelMedium,
         ),
       ],
     );

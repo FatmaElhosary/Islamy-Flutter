@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy/app_bar.dart';
 import 'package:islamy/my_theme.dart';
+import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/taps/quran_tab/aya_text.dart';
 import 'package:islamy/taps/quran_tab/soura_name_text.dart';
 import 'package:islamy/widgets/divider_line.dart';
 import 'package:islamy/widgets/progress_indicator.dart';
+import 'package:provider/provider.dart';
 
 import '../data_class/soura_details_args.dart';
 
@@ -29,9 +31,9 @@ class _SouraDetailsState extends State<SouraDetails> {
       loadSouraFile(souraDetails.SouraNumber);
     }
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/background.png'),
+          image: AssetImage(Provider.of<SettingsProvider>(context).bgImage),
           fit: BoxFit.cover,
         ),
       ),
@@ -42,7 +44,7 @@ class _SouraDetailsState extends State<SouraDetails> {
               vertical: MediaQuery.of(context).size.height * .06,
               horizontal: MediaQuery.of(context).size.width * 0.05),
           decoration: BoxDecoration(
-            color: MyTheme.lightWhite,
+            color: Theme.of(context).colorScheme.background,
             borderRadius: BorderRadius.circular(25),
           ),
           child: Column(
@@ -71,7 +73,7 @@ class _SouraDetailsState extends State<SouraDetails> {
 
   Future<void> loadSouraFile(int suraNumber) async {
     String sura = await rootBundle.loadString('assets/files/$suraNumber.txt');
-    
+
     ayat = sura.trim().split('\r\n');
     setState(() {});
   }
