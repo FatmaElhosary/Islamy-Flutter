@@ -8,7 +8,7 @@ class DivideHorizental extends StatelessWidget {
     return Divider(
       height: 0,
       thickness: 3,
-      color: Theme.of(context).primaryColor,
+      color: Theme.of(context).colorScheme.onSecondary,
     );
   }
 }

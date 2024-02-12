@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/taps/sebha_tab/tasbeeh_number.dart';
 import 'package:islamy/taps/sebha_tab/zkr_name.dart';
 import 'package:islamy/widgets/image_widget.dart';
 import 'package:islamy/widgets/title_widget.dart';
+import 'package:provider/provider.dart';
 
 class SebhaView extends StatefulWidget {
   SebhaView({super.key});
@@ -57,7 +59,9 @@ class _SebhaViewState extends State<SebhaView> {
                 child: AnimatedRotation(
                     turns: turns,
                     duration: const Duration(seconds: 1),
-                    child: ImageWidget(imgPath: 'assets/images/sebha.png')))),
+                    child: ImageWidget(
+                        imgPath:
+                            Provider.of<SettingsProvider>(context).sebhaImg)))),
         const SizedBox(
           height: 41,
         ),
