@@ -24,11 +24,11 @@ class _HadethViewState extends State<HadethView> {
     }
     return Column(
       children: [
-        AhadethImg(
+        const AhadethImg(
           imagePath: 'assets/images/ahadeth_image.png',
         ),
         const DivideHorizental(),
-        HadethHeader(title: 'الأحاديث'),
+        const HadethHeader(title: 'الأحاديث'),
         const DivideHorizental(),
         Expanded(
             child: ahadethList.isEmpty

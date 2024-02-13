@@ -3,9 +3,9 @@ import 'package:islamy/data_class/soura.dart';
 import 'package:islamy/taps/quran_tab/sura_widget.dart';
 
 class NamesListWidget extends StatelessWidget {
-  List<Soura> sour;
+  final List<Soura> sour;
 
-  NamesListWidget({super.key, required this.sour});
+ const NamesListWidget({super.key, required this.sour});
 
   @override
   Widget build(BuildContext context) {

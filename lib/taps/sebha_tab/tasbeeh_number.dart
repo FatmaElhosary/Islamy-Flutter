@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islamy/my_theme.dart';
+
 
 class TasbehNumber extends StatelessWidget {
-  int number;
-  TasbehNumber({super.key, required this.number});
+ final int number;
+  const TasbehNumber({super.key, required this.number});
 
   @override
   Widget build(BuildContext context) {

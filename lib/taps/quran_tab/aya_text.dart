@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AyaLine extends StatelessWidget {
-  String ayaLine;
-  int ayaNumber;
-  AyaLine({super.key, required this.ayaLine, required this.ayaNumber});
+  final String ayaLine;
+  final int ayaNumber;
+  const AyaLine({super.key, required this.ayaLine, required this.ayaNumber});
 
   @override
   Widget build(BuildContext context) {

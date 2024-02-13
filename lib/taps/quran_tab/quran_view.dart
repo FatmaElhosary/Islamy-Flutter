@@ -5,8 +5,8 @@ import 'package:islamy/taps/quran_tab/text_head.dart';
 import 'package:islamy/widgets/global_divid.dart';
 
 class QuranView extends StatelessWidget {
-  List<Soura> sour = [];
-  List<String> quranVerseCounts = [
+final  List<Soura> sour = [];
+   final List<String> quranVerseCounts = [
     "7", // Al-Fatiha
     "286", // Al-Baqarah
     "200", // Al-Imran
@@ -122,7 +122,7 @@ class QuranView extends StatelessWidget {
     "5", // Al-Falaq
     "6", // An-Nas
   ];
-  List<String> souraNames = [
+ final List<String> souraNames = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -259,7 +259,7 @@ class QuranView extends StatelessWidget {
               Column(
                 children: [
                   const DivideHorizental(),
-                  Row(
+                  const Row(
                     children: [
                       TextHead(
                         textTitle: 'عدد الآيات',

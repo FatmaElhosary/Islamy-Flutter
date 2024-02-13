@@ -7,7 +7,7 @@ import 'package:islamy/widgets/title_widget.dart';
 import 'package:provider/provider.dart';
 
 class SebhaView extends StatefulWidget {
-  SebhaView({super.key});
+ const SebhaView({super.key});
 
   @override
   State<SebhaView> createState() => _SebhaViewState();
@@ -68,7 +68,7 @@ class _SebhaViewState extends State<SebhaView> {
         Expanded(
           child: Column(
             children: [
-              TitleWidget(
+              const TitleWidget(
                 title: 'عدد التسبيحات',
               ),
               TasbehNumber(number: counter),
