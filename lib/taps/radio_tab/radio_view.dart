@@ -8,15 +8,15 @@ class RadioView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ImageWidget(imgPath: 'assets/images/radio_image.png'),
-        const SizedBox(
+        SizedBox(
           height: 55,
         ),
         TitleWidget(title: 'إذاعة القرآن الكريم'),
-        const SizedBox(
+        SizedBox(
           height: 65,
         ),
         RadioControl(),

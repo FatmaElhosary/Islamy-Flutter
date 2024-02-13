@@ -1,6 +1,6 @@
 class SouraDetailsArgs{
-  String SouraName;
-  int SouraNumber;
+  String souraName;
+  int souraNumber;
 
-  SouraDetailsArgs(this.SouraName, this.SouraNumber);
+  SouraDetailsArgs(this.souraName, this.souraNumber);
 }

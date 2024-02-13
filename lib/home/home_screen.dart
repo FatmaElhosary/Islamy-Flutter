@@ -22,11 +22,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   List<Widget> taps = [
-    RadioView(),
-    SebhaView(),
-    HadethView(),
+    const RadioView(),
+   const  SebhaView(),
+    const HadethView(),
     QuranView(),
-    Settings()
+    const Settings()
   ];
 
   void _onItemTapped(int index) {
@@ -53,25 +53,26 @@ class _HomeScreenState extends State<HomeScreen> {
           selectedIndex: _selectedIndex,
           destinations: [
             NavigationDestination(
-              icon: ImageIcon(
+              icon: const ImageIcon(
                 AssetImage('assets/images/radio_icon.png'),
               ),
               label: AppLocalizations.of(context)!.radio,
             ),
             NavigationDestination(
-              icon: ImageIcon(AssetImage('assets/images/sebha_icon.png')),
+              icon: const ImageIcon(AssetImage('assets/images/sebha_icon.png')),
               label: AppLocalizations.of(context)!.sebha,
             ),
             NavigationDestination(
-              icon: ImageIcon(AssetImage('assets/images/hadeth_icon.png')),
+              icon:
+                  const ImageIcon(AssetImage('assets/images/hadeth_icon.png')),
               label: AppLocalizations.of(context)!.hadeth,
             ),
             NavigationDestination(
-              icon: ImageIcon(AssetImage('assets/images/quran_icon.png')),
+              icon: const ImageIcon(AssetImage('assets/images/quran_icon.png')),
               label: AppLocalizations.of(context)!.quran,
             ),
             NavigationDestination(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               label: AppLocalizations.of(context)!.settings,
             ),
           ],

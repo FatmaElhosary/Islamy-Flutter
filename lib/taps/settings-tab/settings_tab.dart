@@ -28,7 +28,7 @@ class _SettingsState extends State<Settings> {
           const SizedBox(
             height: 10,
           ),
-          SwitchWidget(),
+        const  SwitchWidget(),
           const SizedBox(
             height: 20,
           ),
@@ -73,6 +73,6 @@ class _SettingsState extends State<Settings> {
 
   void showScreenSheet() {
     showModalBottomSheet(
-        context: context, builder: (context) => LanguageBottomSheet());
+        context: context, builder: (context) => const LanguageBottomSheet());
   }
 }

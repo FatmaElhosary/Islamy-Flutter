@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AhadethImg extends StatelessWidget {
-  String imagePath;
-  AhadethImg({super.key, required this.imagePath});
+  final String imagePath;
+ const AhadethImg({super.key, required this.imagePath});
 
   @override
   Widget build(BuildContext context) {

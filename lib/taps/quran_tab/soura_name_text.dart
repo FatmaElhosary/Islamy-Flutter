@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:provider/provider.dart';
 
-class suraDetailsName extends StatelessWidget {
-  String souraName;
-  suraDetailsName({super.key, required this.souraName});
+class SuraDetailsName extends StatelessWidget {
+ final String souraName;
+ const SuraDetailsName({super.key, required this.souraName});
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:islamy/my_theme.dart';
 import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/screens/hadeth_details.dart';
 import 'package:islamy/screens/soura_details.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 

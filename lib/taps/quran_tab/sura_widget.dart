@@ -5,10 +5,10 @@ import 'package:islamy/screens/soura_details.dart';
 import '../../data_class/soura_details_args.dart';
 
 class SuraWidget extends StatelessWidget {
-  Soura soura;
+  final Soura soura;
 
-  int index;
-  SuraWidget({
+ final int index;
+const  SuraWidget({
     super.key,
     required this.soura,
     required this.index,

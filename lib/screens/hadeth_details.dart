@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/app_bar.dart';
 import 'package:islamy/data_class/hadeth_data.dart';
-import 'package:islamy/my_theme.dart';
 import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/taps/quran_tab/aya_text.dart';
 import 'package:islamy/taps/quran_tab/soura_name_text.dart';
-import 'package:islamy/taps/settings-tab/settings_tab.dart';
 import 'package:islamy/widgets/divider_line.dart';
 import 'package:provider/provider.dart';
 
@@ -36,7 +34,7 @@ class HadethDetails extends StatelessWidget {
           ),
           child: Column(
             children: [
-              suraDetailsName(souraName: hadeth.hadethNumber),
+              SuraDetailsName(souraName: hadeth.hadethNumber),
               const DividerLine(),
               Expanded(
                 child: ListView.builder(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HadethHeader extends StatelessWidget {
-  String title;
-  HadethHeader({super.key, required this.title});
+ final String title;
+const  HadethHeader({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy/app_bar.dart';
-import 'package:islamy/my_theme.dart';
+
 import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/taps/quran_tab/aya_text.dart';
 import 'package:islamy/taps/quran_tab/soura_name_text.dart';
@@ -28,7 +28,7 @@ class _SouraDetailsState extends State<SouraDetails> {
     SouraDetailsArgs souraDetails =
         ModalRoute.of(context)!.settings.arguments as SouraDetailsArgs;
     if (ayat.isEmpty) {
-      loadSouraFile(souraDetails.SouraNumber);
+      loadSouraFile(souraDetails.souraNumber);
     }
     return Container(
       decoration: BoxDecoration(
@@ -49,7 +49,7 @@ class _SouraDetailsState extends State<SouraDetails> {
           ),
           child: Column(
             children: [
-              suraDetailsName(souraName: souraDetails.SouraName),
+              SuraDetailsName(souraName: souraDetails.souraName),
               const DividerLine(),
               Expanded(
                 child: ayat.isEmpty

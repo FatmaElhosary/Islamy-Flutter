@@ -3,9 +3,9 @@ import 'package:islamy/data_class/hadeth_data.dart';
 import 'package:islamy/screens/hadeth_details.dart';
 
 class HadethTitle extends StatelessWidget {
-  Hadeth hadeth;
+  final Hadeth hadeth;
   // void Function() onTapClick;
-  HadethTitle({
+ const HadethTitle({
     super.key,
     required this.hadeth,
   });
@@ -23,6 +23,6 @@ class HadethTitle extends StatelessWidget {
           style: Theme.of(context).textTheme.labelLarge,
           textAlign: TextAlign.center,
         ));
-    ;
+    
   }
 }

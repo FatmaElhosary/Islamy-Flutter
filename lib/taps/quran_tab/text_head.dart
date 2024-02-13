@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TextHead extends StatelessWidget {
-  String textTitle;
+ final String textTitle;
 
-  TextHead({super.key, required this.textTitle});
+ const TextHead({super.key, required this.textTitle});
 
   @override
   Widget build(BuildContext context) {
