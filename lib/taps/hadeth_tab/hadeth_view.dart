@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy/data_class/hadeth_data.dart';
-import 'package:islamy/taps/hadeth_tab/ahadeth_image.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth.dart';
 import 'package:islamy/taps/hadeth_tab/hadeth_title.dart';
 import 'package:islamy/widgets/global_divid.dart';
+import 'package:islamy/widgets/image_widget.dart';
 import 'package:islamy/widgets/progress_indicator.dart';
 
 class HadethView extends StatefulWidget {
@@ -24,9 +24,7 @@ class _HadethViewState extends State<HadethView> {
     }
     return Column(
       children: [
-        const AhadethImg(
-          imagePath: 'assets/images/ahadeth_image.png',
-        ),
+        const ImageWidget(imgPath: 'assets/images/ahadeth_image.png'),
         const DivideHorizental(),
         const HadethHeader(title: 'الأحاديث'),
         const DivideHorizental(),

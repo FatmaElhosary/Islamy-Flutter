@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamy/packages/providers/settings_provider.dart';
 import 'package:islamy/taps/settings-tab/switch_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islamy/widgets/language_bottom_sheet.dart';
-import 'package:provider/provider.dart';
+import 'package:islamy/widgets/drop_down_menu.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -15,7 +13,8 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -28,18 +27,29 @@ class _SettingsState extends State<Settings> {
           const SizedBox(
             height: 10,
           ),
-        const  SwitchWidget(),
+          const SwitchWidget(),
           const SizedBox(
             height: 20,
           ),
           Text(
-            AppLocalizations.of(context)!.settings,
+            AppLocalizations.of(context)!.language,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(
             height: 10,
           ),
-          InkWell(
+          DropDown(),
+        ],
+      ),
+    );
+  }
+/* 
+  void showScreenSheet() {
+    showModalBottomSheet(
+        context: context, builder: (context) => const LanguageBottomSheet());
+  } */
+}
+/* InkWell(
             onTap: () {
               showScreenSheet();
             },
@@ -66,13 +76,4 @@ class _SettingsState extends State<Settings> {
               ),
             ),
           )
-        ],
-      ),
-    );
-  }
-
-  void showScreenSheet() {
-    showModalBottomSheet(
-        context: context, builder: (context) => const LanguageBottomSheet());
-  }
-}
+         */
