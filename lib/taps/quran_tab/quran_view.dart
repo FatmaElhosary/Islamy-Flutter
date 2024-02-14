@@ -3,10 +3,11 @@ import 'package:islamy/data_class/soura.dart';
 import 'package:islamy/taps/quran_tab/names_list_widget.dart';
 import 'package:islamy/taps/quran_tab/text_head.dart';
 import 'package:islamy/widgets/global_divid.dart';
+import 'package:islamy/widgets/image_widget.dart';
 
 class QuranView extends StatelessWidget {
-final  List<Soura> sour = [];
-   final List<String> quranVerseCounts = [
+  final List<Soura> sour = [];
+  final List<String> quranVerseCounts = [
     "7", // Al-Fatiha
     "286", // Al-Baqarah
     "200", // Al-Imran
@@ -122,7 +123,7 @@ final  List<Soura> sour = [];
     "5", // Al-Falaq
     "6", // An-Nas
   ];
- final List<String> souraNames = [
+  final List<String> souraNames = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -249,7 +250,8 @@ final  List<Soura> sour = [];
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/images/quran.png'),
+        const ImageWidget(imgPath: 'assets/images/quran.png'),
+       
         const SizedBox(
           height: 13.5,
         ),
