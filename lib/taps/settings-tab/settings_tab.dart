@@ -38,7 +38,7 @@ class _SettingsState extends State<Settings> {
           const SizedBox(
             height: 10,
           ),
-          DropDown(),
+          const DropDown(),
         ],
       ),
     );

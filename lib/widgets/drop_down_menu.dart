@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DropDown extends StatelessWidget {
-  DropDown({super.key});
+  const DropDown({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class DropDown extends StatelessWidget {
       )),
       textStyle: Theme.of(context).textTheme.labelMedium,
       initialSelection: languages
-          .firstWhere((lang) => settingsProvider.appLanguage == lang.lanCode),
+          .firstWhere((lang) => settingsProvider.appLang == lang.lanCode),
       onSelected: (language) =>
           settingsProvider.changeLanguage(language!.lanCode),
       dropdownMenuEntries: languages
