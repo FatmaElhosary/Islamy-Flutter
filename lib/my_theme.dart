@@ -19,7 +19,6 @@ class MyTheme {
         secondary: lightWhite, */
         //////////////////// switch////
         outline: primary,
-
         onPrimary: blackColor,
         seedColor: primary,
         secondary: lightWhite,
@@ -86,7 +85,6 @@ class MyTheme {
         seedColor: primary,
         onSecondary: goldColor,
         background: blueColor,
-        //secondary: primary,
       ),
       iconTheme: IconThemeData(color: goldColor),
       primaryColor: blueColor,
